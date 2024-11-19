@@ -141,11 +141,11 @@ body {
   font-size: 1.8rem;
 }
 #container {
-  background: var(--white);
+  background: var(--bg);
+  color: var(--black);
 }
 
 /* 다크 모드 공통 적용 스타일 */
-
 #container.dark {
   background: var(--black);
   color: var(--white);
@@ -300,6 +300,11 @@ body {
   height: 2rem;
   /* border: 1px solid #000; */
   background: url(/img/ico-clock.svg) no-repeat 50% / 96% auto;
+}
+
+/* dark mode footer */
+#footer.dark {
+  background: var(--black);
 }
 
 .btn-top {
