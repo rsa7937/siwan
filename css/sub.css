@@ -256,6 +256,60 @@ p {
   /* height: 100%; */
 }
 
+/* Selected Works : 02 pelli */
+/* section : problem-definition */
+#problem-definition .problem-wrap {
+  text-align: center;
+}
+#problem-definition .problem-wrap strong {
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  padding: 2.8rem 12rem;
+  background: var(--point-color);
+  border-radius: 1.6rem;
+  color: var(--white);
+  position: relative;
+}
+#problem-definition .problem-wrap strong::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 3%;
+  width: 8.9rem;
+  height: 6rem;
+  background: url(../img/pelli/problem-definition-qm.svg);
+}
+#problem-definition .problem-wrap p {
+  margin-top: 1.6rem;
+  font-size: 1.8rem;
+}
+.key-insight-wrap {
+  counter-reset: index-count;
+}
+.key-insight-wrap .key-insight span {
+  font-size: 2rem;
+  font-weight: 600;
+
+  display: flex;
+  gap: 1.6rem;
+  counter-increment: index-count;
+}
+
+.key-insight-wrap .key-insight span::before {
+  color: var(--point-color);
+  content: '0' counter(index-count);
+}
+.key-insight-wrap .key-insight p {
+  padding-left: 3.6rem;
+  margin-top: 1.2rem;
+}
+.key-insight-wrap .key-insight li:not(:first-child) p {
+  padding-left: 4rem;
+}
+
 /* section : more works */
 .work-list-title {
   font-size: 2rem;
