@@ -195,7 +195,7 @@ body {
 .index ul li a {
   display: flex;
   padding: 0.4rem 0;
-  font-weight: 300;
+  font-weight: 400;
   opacity: 0.8;
   transition: 0.4s;
   color: var(--black2);
@@ -216,7 +216,7 @@ body {
   color: var(--point-color);
 }
 .index ul li.on a {
-  font-weight: 500;
+  font-weight: 600;
   opacity: 1;
 }
 .index ul li.on a::after {
@@ -299,12 +299,15 @@ body {
   width: 2rem;
   height: 2rem;
   /* border: 1px solid #000; */
-  background: url(/img/ico-clock.svg) no-repeat 50% / 96% auto;
+  background: url(../img/ico-clock.svg) no-repeat 50% / 96% auto;
 }
 
 /* dark mode footer */
 #footer.dark {
   background: var(--black);
+}
+#footer.dark p b {
+  color: var(--black2);
 }
 
 .btn-top {

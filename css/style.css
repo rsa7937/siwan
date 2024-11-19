@@ -1,10 +1,6 @@
 .wide-inner {
   /* background: rgba(255, 255, 0, 0.2); */
 }
-#container.light {
-  background: var(--bg);
-  color: var(--black);
-}
 
 /* section 001 : visual */
 #visual {
@@ -61,12 +57,12 @@
 }
 
 .link-wrap li.link a::after {
-  background-image: url(/img/ico-link.svg);
+  background-image: url(../img/ico-link.svg);
 }
 
 .link-wrap li.download a::after {
   background: no-repeat 50% / cover;
-  background-image: url(/img/ico-download.svg);
+  background-image: url(../img/ico-download.svg);
 }
 
 .direction {
@@ -85,7 +81,7 @@
   display: block;
   width: 3.2rem;
   height: 3.6rem;
-  background: url(/img/ico-arrow.svg) no-repeat 50% / contain;
+  background: url(../img/ico-arrow.svg) no-repeat 50% / contain;
 }
 
 /* section : selected */
