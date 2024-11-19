@@ -104,7 +104,7 @@
 #overview .info .team ul li.member::before {
   background-color: var(--point-color);
   /* -webkit-mask: url(/img/ico-member.svg) no-repeat center; */
-  mask: url(/img/ico-member.svg) no-repeat center;
+  mask: url(../img/ico-member.svg) no-repeat center;
   /* -webkit-mask-size: contain; */
   mask-size: contain;
 }
@@ -112,7 +112,7 @@
 #overview .info .team ul li.advisor::before {
   background-color: var(--point-color);
   /* -webkit-mask: url(/img/ico-member.svg) no-repeat center; */
-  mask: url(/img/ico-advisor.svg) no-repeat center;
+  mask: url(../img/ico-advisor.svg) no-repeat center;
   /* -webkit-mask-size: contain; */
   mask-size: contain;
 }
