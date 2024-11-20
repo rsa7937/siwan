@@ -310,6 +310,229 @@ p {
   padding-left: 4rem;
 }
 
+/* Pelli의 Ux-concept */
+/* Pelli  아이콘 */
+.icon-wrap {
+  /* border: 1px solid #000; */
+  height: 8rem;
+}
+.icon-wrap figure {
+  height: 100%;
+}
+
+/* As-is To-be Impac 표 */
+.table-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.table-wrap .title,
+.table-wrap .impact1,
+.table-wrap .impact2,
+.table-wrap .impact3 {
+  display: flex;
+  gap: 2rem;
+}
+.table-wrap .title li,
+.table-wrap .impact1 li,
+.table-wrap .impact2 li,
+.table-wrap .impact3 li {
+  flex: 1 1 40%;
+  /* border: 1px solid #000; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* as-is to-be impact를 가로지르는 줄 */
+.table-wrap > ul:not(:first-child) {
+  position: relative;
+  /* border: 10px solid #000; */
+}
+.table-wrap > ul li {
+  z-index: 1;
+}
+.table-wrap > ul:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0%;
+  width: 100%;
+  height: 0.2rem;
+  background: var(--point-color);
+  z-index: 0;
+}
+
+.table-wrap .title li:not(:nth-child(2)),
+.table-wrap .impact1 li:not(:nth-child(2)),
+.table-wrap .impact2 li:not(:nth-child(2)),
+.table-wrap .impact3 li:not(:nth-child(2)) {
+  flex-basis: 30%;
+  /* border: 1px solid #000; */
+}
+
+.table-wrap .title strong {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--black2);
+  padding: 0 1.2rem;
+}
+
+.table-wrap .badge {
+  background: #000;
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 0.4rem;
+
+  display: none;
+}
+.table-wrap .badge.color {
+  background: var(--point-color);
+}
+.table-wrap .badge.noncolor {
+  background: var(--white);
+  color: var(--point-color);
+  border: 2px solid var(--point-color);
+}
+.table-wrap ul:not(:first-child) li {
+  padding: 1.2rem 2.8rem;
+  border-radius: 0.4rem;
+}
+
+/* As-is */
+.table-wrap ul:not(:first-child) li:first-child {
+  background: #fafafa;
+}
+/* To-be */
+.table-wrap ul:not(:first-child) li:nth-child(2) {
+  background: #fafafa;
+  border: 2px solid var(--point-color);
+}
+/* Impact */
+.table-wrap ul:not(:first-child) li:last-child {
+  background: var(--point-color);
+  font-weight: 600;
+}
+.table-wrap ul:not(:first-child) li:last-child p {
+  color: var(--white);
+}
+
+/* Pelli section : prototype */
+#prototype {
+}
+#prototype > .inner {
+  position: relative;
+  /* height: calc(100vh - 18rem); */
+}
+#prototype .sec-title {
+  position: sticky;
+  top: 10rem;
+  /* border: 1px solid #000; */
+  z-index: 10;
+}
+#prototype .step-wrap {
+  position: relative;
+  counter-reset: index-count;
+}
+#prototype .step-wrap .step {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  /* border: 1px solid #000; */
+  background: var(--bg);
+  counter-increment: index-count;
+}
+#prototype .step-wrap .step .pic,
+#prototype .step-wrap .step .text {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  width: 50%;
+  flex-direction: column;
+
+  /* border: 1px solid #000; */
+}
+#prototype .step-wrap .step .pic {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#prototype .step-wrap .step .pic figure {
+  max-height: 50rem;
+  max-width: 50rem;
+  /* border: 1px solid #000; */
+  /* border: 1px solid #000; */
+}
+#prototype .step-wrap .step .pic figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#prototype .step-wrap .step .text {
+  align-items: left;
+  padding: 8rem;
+  gap: 1.6rem;
+}
+#prototype .step-wrap .step .text strong {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--point-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  /* background: #000; */
+  line-height: 1.2;
+}
+#prototype .step-wrap .step .text strong::before {
+  content: '0' counter(index-count);
+  display: flex;
+  width: 3rem;
+  height: 3rem !important;
+  padding: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg);
+  background: var(--point-color);
+  border-radius: 8rem;
+  font-size: 2rem;
+  /* border: 1px solid #000; */
+}
+#prototype .step-wrap .step .text p {
+  /* padding-left: 5.2rem; */
+  font-size: 1.8rem;
+}
+
+#prototype .step-wrap .step:nth-child(4),
+#prototype .step-wrap .step:nth-child(5),
+#prototype .step-wrap .step:nth-child(6) {
+  flex-direction: column;
+}
+#prototype .step-wrap .step:nth-child(4) .pic,
+#prototype .step-wrap .step:nth-child(5) .pic,
+#prototype .step-wrap .step:nth-child(6) .pic {
+  width: 100%;
+  height: 60%;
+  justify-content: flex-end;
+}
+#prototype .step-wrap .step:nth-child(4) .pic figure,
+#prototype .step-wrap .step:nth-child(5) .pic figure {
+  max-width: 90rem;
+  max-height: 50rem;
+}
+#prototype .step-wrap .step:nth-child(4) .text,
+#prototype .step-wrap .step:nth-child(5) .text,
+#prototype .step-wrap .step:nth-child(6) .text {
+  width: 100%;
+  height: 40%;
+  justify-content: flex-start;
+  padding: 4rem 16rem;
+}
+
 /* section : more works */
 .work-list-title {
   font-size: 2rem;

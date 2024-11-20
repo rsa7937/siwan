@@ -49,16 +49,27 @@ $(function () {
     });
   });
 
-  gsap.from($('.btn-top'), {
-    autoAlpha: 0,
-    duration: 0.5,
-    y: 30,
-    scrollTrigger: {
-      trigger: 'section:nth-of-type(3)',
-      start: 'top 20%',
-      markers: true,
-      id: 'btn-top',
-      toggleActions: 'play none reverse reverse',
-    },
+  const $stepEl = gsap.utils.toArray('#prototype .step-wrap .step');
+
+  // 각 step의 애니메이션 설정
+  $stepEl.forEach((step, index) => {
+    // 타임라인 생성
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: step,
+        start: '30% top', // 스크롤 트리거 시작 지점
+        end: 'bottom 30%', // 스크롤 트리거 끝 지점
+        scrub: true, // 스크롤에 따라 애니메이션 제어
+        markers: true, // 디버깅용 마커 표시
+      },
+    });
+
+    // 현재 step: autoAlpha 1 → 0
+    tl.fromTo(step, { autoAlpha: 1, duration: 2 }, { autoAlpha: 0, duration: 10 });
+
+    // 다음 step: autoAlpha 0 → 1 (다음 요소가 존재할 때만)
+    if ($stepEl[index + 1]) {
+      tl.fromTo($stepEl[index + 1], { autoAlpha: 0, duration: 2 }, { autoAlpha: 1, duration: 6 });
+    }
   });
 });

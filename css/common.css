@@ -44,6 +44,7 @@
 .pelli {
   --point-color: var(--pelli);
   --point-color-20p: var(--pelli-20p);
+  background: var(--bg);
 }
 
 .home {

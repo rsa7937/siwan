@@ -37,7 +37,7 @@ $(function () {
     scrollTrigger: {
       trigger: 'section:nth-of-type(3)',
       start: 'top 20%',
-      markers: true,
+      // markers: true,
       id: 'btn-top',
       toggleActions: 'play none reverse reverse',
     },
