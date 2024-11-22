@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 /* font */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&display=swap');
 
 :root {
   font-size: 62.5%;
@@ -18,6 +18,8 @@
 
   --gray: #666666;
   --gray1: #aaaaaa;
+  --gray2: #cccccc;
+  --gray3: #eeeeee;
 
   --bg: #f4f1ec;
 
@@ -29,7 +31,10 @@
   --carola-20p: rgba(176, 84, 255, 0.2);
 
   --pelli: #00b992;
-  --pelli-20p: rgba(0, 185, 146, 0.2);
+  --pelli-10p: rgba(0, 185, 146, 0.1);
+
+  --innovation: #773ede;
+  --innovation-10p: rgba(119, 62, 222, 0.1);
 }
 
 /* 각 프로젝트 마다의 컬러 클래스*/
@@ -43,8 +48,11 @@
 }
 .pelli {
   --point-color: var(--pelli);
-  --point-color-20p: var(--pelli-20p);
-  background: var(--bg);
+  --point-color-20p: var(--pelli-10p);
+}
+.innovation {
+  --point-color: var(--innovation);
+  --point-color-20p: var(--innovation-10p);
 }
 
 .home {
@@ -78,8 +86,10 @@ hr,
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
 }
+
 html {
   scroll-behavior: smooth;
+  background: var(--bg);
 }
 
 body {
