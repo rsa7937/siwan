@@ -645,6 +645,27 @@ p {
 .key-project p {
   font-size: 1.8rem;
 }
+.key-project .sec-title {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+.key-project .sec-title b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: var(--point-color);
+
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 3.2rem;
+  font-size: 1.8rem;
+
+  flex-shrink: 0;
+  /* border: 1px solid #000; */
+}
+
 .key-project .title {
   display: flex;
   gap: 1.6rem;
