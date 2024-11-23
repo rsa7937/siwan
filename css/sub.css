@@ -77,7 +77,8 @@
 
 #overview .info .team ul,
 #overview .info .key-area ul,
-#overview .info .role ul {
+#overview .info .role ul,
+#overview .info .client ul {
   display: flex;
   gap: 1.2rem;
   flex-wrap: wrap;
@@ -88,7 +89,7 @@
   padding: 0.8rem 1.2rem;
   border: 2px solid var(--point-color);
   background: var(--point-color-20p);
-  border-radius: 0.8rem;
+  border-radius: 0.6rem;
   color: var(--point-color);
   /* font-size: 1.8rem; */
   font-weight: 500;
@@ -100,7 +101,8 @@
 }
 #overview .info .team ul li.member::before,
 #overview .info .team ul li.advisor::before,
-#overview .info .team ul li.group::before {
+#overview .info .team ul li.group::before,
+#overview .info .client ul li.company::before {
   content: '';
   display: block;
   width: 2rem;
@@ -127,6 +129,13 @@
   background-color: var(--point-color);
   /* -webkit-mask: url(/img/ico-member.svg) no-repeat center; */
   mask: url(../img/ico-group.svg) no-repeat center;
+  /* -webkit-mask-size: contain; */
+  mask-size: contain;
+}
+#overview .info .client ul li.company::before {
+  background-color: var(--point-color);
+  /* -webkit-mask: url(/img/ico-member.svg) no-repeat center; */
+  mask: url(../img/ico-company.svg) no-repeat center;
   /* -webkit-mask-size: contain; */
   mask-size: contain;
 }
@@ -272,10 +281,12 @@ p {
 
 /* Selected Works : 02 pelli */
 /* section : problem-definition */
-#problem-definition .problem-wrap {
+#problem-definition .problem-wrap,
+#phase2 .problem-wrap {
   text-align: center;
 }
-#problem-definition .problem-wrap strong {
+#problem-definition .problem-wrap strong,
+#phase2 .problem-wrap strong {
   display: inline-block;
   font-size: 2.4rem;
   font-weight: 600;
@@ -287,7 +298,8 @@ p {
   color: var(--white);
   position: relative;
 }
-#problem-definition .problem-wrap strong::before {
+#problem-definition .problem-wrap strong::before,
+#phase2 .problem-wrap strong::before {
   content: '';
   position: absolute;
   top: 0;
@@ -549,6 +561,7 @@ p {
 
 /* Selected Works : 03 innovation */
 /* section : reflection */
+/* step과 phase의 특성상 비슷한 레이아웃이기에 같은 부분에 적었음 */
 .reflection-wrap {
   padding: 3.6rem 4rem;
   background: var(--point-color-20p);
@@ -559,7 +572,8 @@ p {
   line-height: 1.4;
 }
 /* section : context */
-#context strong {
+#context strong,
+.phase strong {
   font-size: 2rem;
   font-weight: 600;
 }
@@ -571,13 +585,24 @@ p {
   font-weight: 600;
   color: var(--point-color);
 }
-.step-wrap ul {
-  display: grid;
+.grid-col4 {
   grid-template-columns: repeat(4, 1fr);
+}
+.grid-col3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-col2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.step-wrap ul,
+.phase-wrap ul {
+  display: grid;
   gap: 2rem;
   counter-reset: index-count;
 }
-.step-wrap ul li {
+.step-wrap ul li,
+.phase-wrap ul li {
   background: #8a83a0;
   border-radius: 0.8rem;
   color: var(--white);
@@ -589,29 +614,61 @@ p {
   flex-direction: column;
   gap: 3.2rem;
 }
+.phase-wrap ul li {
+  background: #135678;
+}
 
-.step-wrap ul li strong {
+.step-wrap ul li strong,
+.phase-wrap ul li strong {
   display: flex;
   align-items: center;
   gap: 1.2rem;
   font-size: 2.4rem;
   font-weight: 600;
 }
+.phase-wrap ul li strong {
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 2.4rem !important;
+  align-items: flex-start;
+}
 
 .step-wrap ul li strong::before {
   content: '0' counter(index-count);
 }
+
+.phase-wrap ul li strong::before {
+  content: 'Phase 0' counter(index-count);
+  font-size: 1.4rem;
+  color: var(--point-color);
+  font-weight: 700;
+  display: inline-flex;
+  padding: 0.4rem 0.8rem;
+  background: var(--bg);
+  border-radius: 0.4rem;
+}
+
 .step-wrap ul li p {
   color: var(--white);
 }
-.step-wrap .period span {
+
+.phase-wrap ul li p {
+  /* color: var(--gray2); */
+  color: var(--white);
+  font-size: 1.6rem !important;
+  margin-top: 2rem !important;
+}
+
+.step-wrap .period span,
+.phase-wrap .period span {
   display: flex;
   gap: 0.8rem;
   align-items: center;
   font-size: 1.4rem;
   color: var(--gray3);
 }
-.step-wrap .period span::before {
+.step-wrap .period span::before,
+.phase-wrap .period span::before {
   content: '';
   width: 1.8rem;
   height: 1.8rem;
@@ -642,15 +699,18 @@ p {
 }
 
 /* section : Key project */
-.key-project p {
+.key-project p,
+.phase p {
   font-size: 1.8rem;
 }
-.key-project .sec-title {
+.key-project .sec-title,
+.phase .sec-title {
   display: flex;
   gap: 1.2rem;
   align-items: center;
 }
-.key-project .sec-title b {
+.key-project .sec-title b,
+.phase .sec-title b {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -666,21 +726,24 @@ p {
   /* border: 1px solid #000; */
 }
 
-.key-project .title {
+.key-project .title,
+.phase .title {
   display: flex;
   gap: 1.6rem;
   align-items: center;
   height: 4rem;
   /* border: 1px solid #000; */
 }
-.key-project .title span {
+.key-project .title span,
+.phase .title span {
   display: block;
   /* border: 1px solid #000; */
   width: 0.16rem;
   height: 50%;
   background: var(--black2);
 }
-.key-project .title p {
+.key-project .title p,
+.phase .title p {
   font-size: 2rem;
   font-weight: 500;
 }
@@ -726,6 +789,70 @@ p {
 }
 #key-project1 .pic2 p {
   font-size: 1.4rem;
+}
+
+/* Selected Works : 04 Portal  */
+/* section : Phase*/
+.phase .contents-wrap {
+  flex-direction: column;
+}
+.phase .contents-wrap > div {
+  width: 100%;
+}
+#phase1 .contents-wrap .address strong,
+#phase3 .contents-wrap .address strong {
+  font-size: 2rem;
+}
+
+#phase2 .feature ul {
+  display: grid;
+  gap: 2rem;
+}
+#phase2 .feature ul li {
+  padding: 2.8rem 3.2rem;
+  background: var(--point-color-20p);
+  border-radius: 1.2rem;
+}
+#phase2 .feature ul li strong {
+  line-height: 1.2;
+  font-size: 1.8rem;
+  color: var(--point-color);
+}
+#phase2 .feature ul li p {
+  color: var(--black2);
+  font-size: 1.6rem;
+  margin-top: 1.2rem;
+}
+
+#phase2 .contents-wrap .problem-wrap p {
+  text-align: left;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+#phase3 .pic-wrap .row2 {
+  display: grid;
+  grid-template-columns: repeat(3, auto); /* 동일한 너비 */
+  /* border: 1px solid #000; */
+  justify-content: space-between;
+}
+
+#phase3 .pic-wrap .row2 figure {
+  /* border: 1px solid #000; */
+  max-height: 26rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#phase3 .pic-wrap .row2 img {
+  width: auto;
+  height: 100%; /* 부모 높이에 맞추기 */
+  max-height: 100%; /* 부모 높이를 넘지 않도록 제한 */
+  align-self: start; /* 상단 정렬 */
+  object-fit: scale-down;
 }
 
 /* section : more works */
@@ -828,6 +955,18 @@ p {
 
   .carola.pic3 video {
     width: 100%;
+  }
+
+  #phase3 .pic-wrap .row2,
+  #phase3 .pic-wrap .row1 {
+    display: grid;
+    grid-template-columns: repeat(1, auto); /* 동일한 너비 */
+    border: 1px solid #000;
+    justify-content: space-between;
+    /* align-items: center; */
+  }
+  #phase3 .pic-wrap .row2 figure {
+    max-height: inherit;
   }
 }
 

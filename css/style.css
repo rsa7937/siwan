@@ -5,7 +5,7 @@
 /* section 001 : visual */
 #visual {
   height: 100vh;
-  background: var(--gray3);
+  /* background: var(--gray3); */
 }
 #visual > .wide-inner {
   /* border: 1px solid #000; */

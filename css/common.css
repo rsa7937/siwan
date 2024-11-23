@@ -35,6 +35,11 @@
 
   --innovation: #773ede;
   --innovation-10p: rgba(119, 62, 222, 0.1);
+
+  --portal: #1f7795;
+  --portal-10p: rgba(31, 119, 149, 0.1);
+  --portal2: #35dcd2;
+  --portal2-10p: rgba(53, 220, 210, 0.1);
 }
 
 /* 각 프로젝트 마다의 컬러 클래스*/
@@ -53,6 +58,12 @@
 .innovation {
   --point-color: var(--innovation);
   --point-color-20p: var(--innovation-10p);
+}
+.portal {
+  --point-color: var(--portal);
+  --point-color2: var(--portal2);
+  --point-color-20p: var(--portal-10p);
+  --point-color2-20p: var(--portal2-10p);
 }
 
 .home {
