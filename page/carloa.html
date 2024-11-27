@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko" class="carola">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIWAN KIM</title>
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/sub.css">
+
+  <!-- <script src="js/jquery-3.7.1.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Day.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.9/dayjs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.9/plugin/utc.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.9/plugin/timezone.min.js"></script>
+
+  <script src="../js/sub-script.js"></script>
+  <script src="../js/script.js"></script>
+
+</head>
+
+<body>
+  <!-- s : header -->
+  <header id="header">
+    <nav>
+      <h1 class="logo">
+        <a href="../index.html">
+          <i class="hidden">home</i>
+        </a>
+      </h1>
+      <ul class="gnb">
+        <li><a href="#">about</a></li>
+        <li><a href="#">works</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- e// : header -->
+
+  <!-- s : main -->
+  <div class="index dark">
+    <strong>index</strong>
+    <ul>
+      <li><a href="#sub-visual">Overview</a></li>
+      <li><a href="#user-research">User research</a></li>
+      <li><a href="#ux-concept">User concept</a></li>
+      <li><a href="#key-features">Key features</a></li>
+    </ul>
+  </div>
+
+  <main id="container" class="dark">
+    <!-- s: section 001 : sub-visual -->
+    <section id="sub-visual">
+      <figure>
+        <img src="../img/carola/sub-visual.png" alt="carola-visualImg">
+      </figure>
+    </section>
+    <!-- e // : section 001 : sub-visual -->
+
+    <!-- s: section 002 : Overview -->
+    <section id="overview">
+      <div class="inner">
+        <div class="title">
+          <h2>In-Car Experience : <br>
+            A Drive-In Concert for Drivers and Passengers</h2>
+          <p class="period">Jan 2020 - Feb 2020</p>
+        </div>
+        <div class="summary">
+          <strong>Summary</strong>
+          <p>As part of the UX Practice course, I led a 14-week project with four teammates. Our team identified key
+            challenges in contactless(online) concert experiences during the COVID-19 period through self-user diaries
+            and focus group interviews. We designed a new drive-in concert experience, Carola, which maximizes presence,
+            immersion, and interactivity. To bring this vision to life, we aligned with trends in the automotive
+            industry, incorporating features such as a wide display and ambient lights to enhance the in-car
+            entertainment experience.
+          </p>
+        </div>
+        <div class="info mt52">
+          <div class="course">
+            <strong>Course</strong>
+            <p>UX Practice Graduate School of Information, Yonsei University</p>
+          </div>
+          <div class="team">
+            <strong>Team</strong>
+            <ul>
+              <li class="member carola">Siwan Kim</li>
+              <li class="member carola">Hyorim Shin</li>
+              <li class="member carola">Moonjoon Kim</li>
+              <li class="member carola">Gyounghwa Na</li>
+              <li class="advisor carola">Junho Choi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- e // : section 002 : Overview -->
+
+    <!-- s: section 003 : User research -->
+    <section id="user-research">
+      <div class="inner">
+        <h3 class="sec-title">User research</h3>
+        <ul class="process col-3">
+          <li>
+            <strong>Desk Research</strong>
+            <p>We investigated trends in remote social phenomena, performing arts, and changes in the in-car environment
+              to define the direction of this project.</p>
+          </li>
+          <li>
+            <strong>Self User Diary</strong>
+            <p>We investigated trends in remote social phenomena, performing arts, and changes in the in-car environment
+              to define the direction of this project.</p>
+          </li>
+          <li>
+            <strong>Focus Group Interview</strong>
+            <p>9 participants who experienced untact performances were divided into three groups, sharing 90 comments
+              that we organized into 8 key insights.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="wide-inner">
+        <figure class="mt52">
+          <img src="../img/carola/user-research.png" alt="carola-userResearch">
+        </figure>
+      </div>
+      <div class="inner">
+        <div class="key-findings mt52">
+          <strong>Key Findings</strong>
+          <ul class="col-3 mt36">
+            <li>
+              <strong>Trend.</strong>
+              <p>Drive-in concerts will likely become a lasting part of concert culture, supported by the growth of
+                electric vehicles and display technology.</p>
+            </li>
+            <li>
+              <strong>Pain Point.</strong>
+              <p>Current contactless concerts lack presence and immersion, making full engagement difficult.</p>
+            </li>
+            <li>
+              <strong>Needs.</strong>
+              <p>Users want more options to customize their experience, like selecting views or adjusting settings on
+                their own devices.</p>
+            </li>
+        </div>
+        </ul>
+      </div>
+    </section>
+    <!-- e // : section 003 : User research -->
+
+    <!-- s: section 004 : UX concept -->
+    <section id="ux-concept">
+      <div class="inner">
+        <h3 class="sec-title">UX concept</h3>
+        <p class="mt36">We designed Carola, a drive-in concert service enhancing the presence and immersion missing from
+          traditional
+          contactless concerts. Leveraging the trend of wide displays in the automotive industry, it creates a joyful
+          experience where passengers can enjoy concerts both together and individually.</p>
+
+        <figure class="carola logo mt52">
+          <img src="../img/carola/ux-concept-logo.png" alt="ux-concept with logo">
+        </figure>
+        <figure class="carola screen mt36">
+          <img src="../img/carola/ux-concept-screen.png" alt="ux-concept with screen">
+        </figure>
+      </div>
+    </section>
+    <!-- e // : section 004 : UX concept -->
+
+    <!-- s: section 005 : Key features -->
+    <section id="key-features">
+      <div class="inner">
+        <h3 class="sec-title">Key features</h3>
+        <ol class="keyfeatures mt72">
+          <li>
+            <strong>Stage Sync, bring stage mood into the car</strong>
+            <p class="mt20">When Automatic Sync is activated, the in-car lighting adjusts in real-time to match the
+              stage lights and
+              effects. <br>
+              Both the driver and passengers can individually control the ambient lighting on their respective
+              sides of the vehicle.</p>
+            <div class="keyf1 picwrap carola mt36">
+              <div class="pic1 carola">
+                <div>
+                  <figure class="short">
+                    <img src="../img/carola/keyfeatures1-autosync.png" alt="autosync">
+                  </figure>
+                </div>
+                <p class="caption">Auto-Sync</p>
+              </div>
+              <div class="pic2 carola">
+                <div>
+                  <figure class="short">
+                    <img src="../img/carola/keyfeatures1-autosyncoff1.png" alt="autosyncoff">
+                  </figure>
+                  <figure class="short">
+                    <img src="../img/carola/keyfeatures1-autosyncoff2.png" alt="autosyncoff">
+                  </figure>
+                  <figure class="short">
+                    <img src="../img/carola/keyfeatures1-autosyncoff3.png" alt="autosyncoff">
+                  </figure>
+                </div>
+                <p class="caption">Personal Setting - Mood Rhythm / Mood Color</p>
+              </div>
+              <div class="pic3 carola">
+                <div>
+                  <video src="../img/carola/keyfeatures1-video.mov"></video>
+                </div>
+                <!-- <p class="caption">Auto-Sync</p> -->
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <strong>Sing Along, turn up the real sound</strong>
+            <p class="mt20">When the driver or passenger enables Sing Along, they can share their in-car sound with
+              others, capturing the live concert atmosphere. Users can adjust the volume balance between the original
+              concert sound and the audience’s sing-along.</p>
+            <div class="keyf2 picwrap carola mt36">
+              <figure>
+                <img src="../img/carola/keyfeatures2-singalong.png" alt="singalong">
+              </figure>
+              <figure class="short">
+                <img src="../img/carola/keyfeatures2-singalong2.png" alt="singalong">
+              </figure>
+            </div>
+          </li>
+          <li>
+            <strong>Fan Mode, cheer loudly for your artist</strong>
+            <p class="mt20">When Fan Mode is automatically activated by the artist, users can see a front-facing view of
+              the cars and tap in the personal area to cheer. <br>
+              If users manually activate Fan Mode, they can customize the color, brightness, and angle of the
+              headlights, allowing them to cheer for the artist with their preferred lighting anytime during the
+              concert.</p>
+
+            <div class="keyf3 picwrap carola mt36">
+              <div class="pic1 carola">
+                <figure>
+                  <img src="../img/carola/keyfeatures3-fanmode.png" alt="keyfeatures3-fanmode">
+                </figure>
+              </div>
+              <div class="pic2 carola">
+                <div>
+                  <figure class="short">
+                    <img src="../img/carola/keyfeatures3-fanmode2.png" alt="keyfeatures3-fanmode">
+                  </figure>
+                  <figure class="short">
+                    <img src="../img/carola/keyfeatures3-fanmode3.png" alt="keyfeatures3-fanmode">
+                  </figure>
+                </div>
+                <!-- <p class="caption">Personal Setting - Mood Rhythm / Mood Color</p> -->
+              </div>
+            </div>
+          </li>
+          <li>
+            <strong>Personal CAM, choose your favorite view</strong>
+            <p class="mt20">While main camera view on the shared screen is fixed, driver and passenger can switch the
+              view just by tapping the personal areas. Users can choose to focus on favorite artists or preferred view
+              to enhance their enjoyment.</p>
+
+            <div class="keyf4 picwrap carola mt36">
+              <figure>
+                <img src="../img/carola/keyfeatures4-personalcam.png" alt="personalcam">
+              </figure>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <!-- e // : section 005 : Key features -->
+
+    <!-- s: section : more works -->
+    <section id="more-works">
+      <div class="inner">
+        <h4 class="work-list-title">More works</h4>
+        <ul class="work-list-wrap">
+          <li>
+            <a href="#">
+              <div class="project-thumbnail">
+                <figure>
+                  <!-- <img src="" alt=""> -->
+                </figure>
+                <p class="title">Project title</p>
+              </div>
+            </a>
+          </li>
+          <li class="active">
+            <a href="#">
+              <div class="project-thumbnail">
+                <figure>
+                  <img src="../img/carola/sub-visual.png" alt="carola project thumbnail">
+                </figure>
+                <p class="title">In-Car Experience : A Drive-In Concert for Drivers and Passengers</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="project-thumbnail">
+                <figure>
+                  <!-- <img src="" alt=""> -->
+                </figure>
+                <p class="title">Project title</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- e //: section : more works -->
+
+
+
+
+  </main>
+
+  <!-- e // : main -->
+
+  <!-- s: footer -->
+  <footer id="footer" class="dark">
+    <div class="wide-inner">
+      <div class="footer-wrap">
+        <div class="foot-left">
+          <div id="kst-time"></div>
+        </div>
+        <div class="foot-right">
+          <p><b>Last updated</b> Nov 2024</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- e // : footer -->
+
+  <button type="button" class="btn-top"><i class="hidden">TOP</i></button>
+</body>
+
+</html>
