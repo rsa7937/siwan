@@ -111,6 +111,7 @@ body {
   font-weight: 300;
 
   position: relative;
+  background: var(--bg);
 }
 
 /* header */
@@ -124,8 +125,14 @@ body {
 
   z-index: 100;
 
+  /* -webkit-mix-blend-mode: difference; */
   mix-blend-mode: difference;
-  filter: invert(1) grayscale(1) contrast(2);
+  -webkit-filter: invert(1) grayscale(0) contrast(1);
+  filter: invert(1) grayscale(0) contrast(1);
+}
+.kiki #header,
+.carola #header {
+  filter: invert(1) grayscale(0) contrast(2);
 }
 
 #header nav {
