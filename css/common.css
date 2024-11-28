@@ -125,7 +125,6 @@ body {
 
   z-index: 100;
 
-  /* -webkit-mix-blend-mode: difference; */
   mix-blend-mode: difference;
   -webkit-filter: invert(1) grayscale(0) contrast(1);
   filter: invert(1) grayscale(0) contrast(1);
@@ -239,6 +238,7 @@ body {
 
   background: var(--white-40p);
   backdrop-filter: blur(1rem);
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.05);
 }
 
 .index ul {
@@ -376,19 +376,58 @@ body {
 
 .btn-top {
   display: block;
+  position: relative;
+
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
   right: 10rem;
   bottom: 10rem;
   position: fixed;
-  background: var(--black1);
+  background: var(--point-color);
   z-index: 200;
   overflow: hidden;
   transition: 0.4s;
+
+  color: var(--white);
 }
-.btn-top:hover {
-  background: var(--point-color);
+.btn-top::before {
+  content: '\EA76';
+  font-family: remixicon;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 0%;
+  left: 0%;
+
+  width: 8rem;
+  height: 8rem;
+  transition: 0.4s;
+}
+.btn-top::after {
+  content: '\EA76';
+  font-family: remixicon;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 100%;
+  left: 0%;
+
+  width: 8rem;
+  height: 8rem;
+  transition: 0.4s;
+}
+.btn-top:hover::before {
+  top: -100%;
+}
+.btn-top:hover::after {
+  top: 0%;
 }
 
 @media (max-width: 1520px) {
