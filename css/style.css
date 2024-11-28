@@ -32,28 +32,44 @@
 .link-wrap ul {
   display: flex;
   margin-top: 4rem;
-  gap: 4rem;
+  gap: 8rem;
 }
 
 .link-wrap li a {
   display: flex;
-  gap: 2rem;
+  gap: 0.8rem;
 
   font-weight: 300;
   font-size: 2rem;
   align-items: center;
   justify-content: center;
+
+  position: relative;
+}
+.link-wrap li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0.4rem;
+  left: 0;
+  width: 100%;
+  height: 0.15rem;
+  background: var(--black);
+  opacity: 0;
 }
 .link-wrap li a::after {
   content: '';
   display: inline-block;
   width: 2.8rem;
   height: 2.8rem;
-  background: no-repeat 50% / cover;
+  background: no-repeat 50% / 90% auto;
 }
+
 .link-wrap li:hover a {
-  text-decoration: underline;
   color: inherit;
+}
+.link-wrap li:hover a::before {
+  opacity: 1;
+  /* text-decoration: underline; */
 }
 
 .link-wrap li.link a::after {
@@ -61,8 +77,8 @@
 }
 
 .link-wrap li.download a::after {
-  background: no-repeat 50% / cover;
   background-image: url(../img/ico-download.svg);
+  margin-bottom: 0.4rem;
 }
 
 .direction {
