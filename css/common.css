@@ -448,3 +448,16 @@ body {
     /* background: rgba(255, 255, 0, 0.05); */
   }
 }
+@media (max-width: 1024px) {
+  #header .gnb {
+    display: none;
+  }
+}
+@media (max-width: 540px) {
+  .footer-wrap {
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+  }
+}

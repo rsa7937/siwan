@@ -112,6 +112,13 @@
 }
 
 /* section : keyfeatures */
+.grid {
+  display: grid;
+}
+.layout {
+  display: grid;
+  grid-template-columns: repeat(1, auto); /* 동일한 너비 */
+}
 .selected-works-wrap {
   counter-reset: index-count;
 }
@@ -218,4 +225,143 @@
 
 .selected-works-wrap li:not(:first-child) {
   border-top: 1px solid var(--black-10p);
+}
+
+@media (max-width: 1220px) {
+  #visual .introduce h2 {
+    font-size: 4rem;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  #visual .introduce h2 b {
+    font-weight: 600;
+  }
+  .link-wrap ul {
+    gap: 4rem;
+  }
+
+  .link-wrap li a {
+    font-size: 1.8rem;
+  }
+  .direction {
+    font-size: 1.4rem;
+  }
+  .direction::before,
+  .direction::after {
+    width: 2rem;
+    height: 3rem;
+  }
+
+  /* selected works */
+  .layout {
+    grid-template-columns: repeat(2, auto); /* 동일한 너비 */
+    gap: 2.8rem;
+    row-gap: 6rem;
+  }
+
+  .sec-title {
+    font-size: 2.4rem;
+  }
+  .selected-works-wrap {
+    margin-top: 3.6rem;
+  }
+
+  .selected-works-wrap li {
+    height: auto;
+    padding: 0 0;
+  }
+
+  .selected-works-wrap li a {
+    cursor: pointer;
+  }
+
+  .selected-works-wrap li a .works-info-wrap {
+    gap: 2rem;
+    flex-direction: column-reverse;
+    justify-content: start;
+  }
+
+  /* selected project text */
+  .works-info-wrap .text {
+    padding: 0.4rem 1.2rem;
+  }
+  .works-info-wrap .text strong {
+    font-size: 2.8rem;
+  }
+  .works-info-wrap .text strong::before {
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+  .works-info-wrap .text strong::after {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  .works-info-wrap .text .text-title {
+  }
+  .works-info-wrap .text .period,
+  .detail {
+    font-size: 2rem;
+    margin-top: 1.2rem;
+  }
+
+  /* selected project img */
+  .works-info-wrap .thumbnail {
+    display: flex;
+    align-items: center;
+  }
+
+  .works-info-wrap .thumbnail figure {
+    max-height: 28rem;
+    min-width: 32rem;
+    width: 100%;
+  }
+
+  .selected-works-wrap li:not(:first-child) {
+    border: none;
+  }
+}
+
+@media (max-width: 800px) {
+  #visual .introduce h2 {
+    font-size: 3.2rem;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .link-wrap ul {
+    justify-content: center;
+    margin-top: 6rem;
+    gap: 8rem;
+    margin-bottom: 7.2rem;
+  }
+
+  .link-wrap li a {
+    font-size: 2rem;
+  }
+  .direction {
+    display: none;
+  }
+
+  /* selected works */
+  .layout {
+    grid-template-columns: repeat(1, auto); /* 동일한 너비 */
+  }
+
+  .works-info-wrap .thumbnail figure {
+    max-height: 40rem;
+  }
+
+  .works-info-wrap .text strong {
+    font-size: 2.4rem;
+  }
+  .works-info-wrap .text strong::before {
+    font-size: 2.4rem;
+    font-weight: 00;
+  }
+
+  .works-info-wrap .text .period,
+  .detail {
+    font-size: 1.8rem;
+  }
 }
