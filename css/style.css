@@ -332,8 +332,9 @@
   .link-wrap ul {
     justify-content: center;
     margin-top: 6rem;
-    gap: 8rem;
+    gap: 6rem;
     margin-bottom: 7.2rem;
+    align-items: center;
   }
 
   .link-wrap li a {
@@ -349,7 +350,7 @@
   }
 
   .works-info-wrap .thumbnail figure {
-    max-height: 40rem;
+    max-height: 34rem;
   }
 
   .works-info-wrap .text strong {
@@ -363,5 +364,51 @@
   .works-info-wrap .text .period,
   .detail {
     font-size: 1.8rem;
+  }
+
+  @media (max-width: 540px) {
+    #visual .introduce h2 {
+      font-size: 2.2rem;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    .link-wrap ul {
+      justify-content: center;
+      margin-top: 6rem;
+      gap: 5.2rem;
+      margin-bottom: 9rem;
+    }
+
+    .link-wrap li a {
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+
+    /* selected works */
+
+    .sec-title {
+    }
+    .selected-works-wrap {
+      margin-top: 2.4rem;
+    }
+    .works-info-wrap .thumbnail figure {
+      max-height: 40rem;
+    }
+
+    .works-info-wrap .text strong {
+      font-size: 2.4rem;
+    }
+    .works-info-wrap .text strong::before {
+      display: none;
+    }
+    .works-info-wrap .text strong::after {
+      display: none;
+    }
+
+    .works-info-wrap .text .period,
+    .detail {
+      font-size: 1.8rem;
+    }
   }
 }
