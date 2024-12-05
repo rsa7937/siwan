@@ -673,7 +673,7 @@ p {
 }
 
 .phase-wrap ul li strong::before {
-  content: 'Phase 0' counter(index-count);
+  content: 'Phase ' counter(index-count);
   font-size: 1.4rem;
   color: var(--point-color);
   font-weight: 700;
@@ -869,6 +869,28 @@ p {
   display: grid;
   gap: 2rem;
 }
+.flex {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.ui-mobile {
+  max-width: 20rem;
+}
+
+.portal #phase2 .pic-wrap {
+  justify-content: space-between;
+}
+
+.portal #phase2 .pic-wrap figure {
+  flex: 0 1 auto; /* 이미지 크기에 맞춰 고정 */
+}
+
+.portal #phase2 .pic-wrap figure img {
+  display: block;
+  width: auto;
+}
+
 #phase3 .pic-wrap .row2 {
   display: grid;
   grid-template-columns: repeat(3, auto); /* 동일한 너비 */
@@ -1141,6 +1163,11 @@ p {
   }
   #phase3 .pic-wrap .row2 figure {
     max-height: inherit;
+  }
+
+  .flex-col-2,
+  .flex-col-3 {
+    flex-direction: column;
   }
 }
 
