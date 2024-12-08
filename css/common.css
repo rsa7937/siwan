@@ -330,6 +330,11 @@ body {
   margin-top: 1.2rem;
 }
 
+/* font-style */
+.italic {
+  font-style: italic;
+  font-weight: 300;
+}
 /* footer */
 #footer {
   padding: 8rem 0 8rem;
