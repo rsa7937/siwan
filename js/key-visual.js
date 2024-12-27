@@ -46,12 +46,11 @@ $(function () {
         $(visualEl[0]).find('.line .tag1 svg:nth-of-type(1) path + path').css({ fill: '#0086FF' });
       });
 
+    const SIpathLength = $(visualEl[0]).find('.line svg:nth-of-type(1) > path')[0].getTotalLength();
     $(visualEl[0])
       .find('.line .tag')
       .on('mouseleave', function () {
-        $(visualEl[0])
-          .find('.line svg:nth-of-type(1) path')
-          .css('stroke-dashoffset', pathLength * 2.613);
+        $(visualEl[0]).find('.line svg:nth-of-type(1) > path').css('stroke-dashoffset', SIpathLength);
         console.log('out');
         $(visualEl[0]).find('.line .tag svg:nth-of-type(1)').css('clip-path', 'inset(100% 0% 0% 0%)');
       });
@@ -73,9 +72,7 @@ $(function () {
     $(visualEl[0])
       .find('.line .tag1')
       .on('mouseleave', function () {
-        $(visualEl[0])
-          .find('.line svg:nth-of-type(1) path')
-          .css('stroke-dashoffset', pathLength * 2.613);
+        $(visualEl[0]).find('.line svg:nth-of-type(1) > path').css('stroke-dashoffset', SIpathLength);
         console.log('out');
         $(visualEl[0]).find('.line .tag svg:nth-of-type(1)').css('clip-path', 'inset(0% 0% 100% 0%)');
       });
