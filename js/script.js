@@ -15,19 +15,19 @@ $(function () {
 
   // Header mouseEnter Leave시 애니메이션
   // works SVG
-  const $worksSvgPath = $('#header .gnb li:nth-child(1) a svg path');
-  const worksPathLength = $worksSvgPath[0].getTotalLength();
+  // const $worksSvgPath = $('#header .gnb li:nth-child(1) a svg path');
+  // const worksPathLength = $worksSvgPath[0].getTotalLength();
 
   // about SVG
   // const $aboutSvgPath = $('#header .gnb li:nth-child(2) a svg path');
   // const aboutPathLength = $aboutSvgPath[0].getTotalLength();
 
   // 초기 설정: stroke-dasharray와 stroke-dashoffset 초기화
-  $worksSvgPath.css({
-    'stroke-dasharray': worksPathLength,
-    'stroke-dashoffset': worksPathLength,
-    transition: 'stroke-dashoffset 0.5s ease',
-  });
+  // $worksSvgPath.css({
+  //   'stroke-dasharray': worksPathLength,
+  //   'stroke-dashoffset': worksPathLength,
+  //   transition: 'stroke-dashoffset 0.5s ease',
+  // });
 
   // $aboutSvgPath.css({
   //   'stroke-dasharray': aboutPathLength,
@@ -36,13 +36,13 @@ $(function () {
   // });
 
   // works 애니메이션
-  $('#header .gnb li:nth-child(1) a').on('mouseenter', function () {
-    $worksSvgPath.css('stroke-dashoffset', 0);
-  });
+  // $('#header .gnb li:nth-child(1) a').on('mouseenter', function () {
+  //   $worksSvgPath.css('stroke-dashoffset', 0);
+  // });
 
-  $('#header .gnb li:nth-child(1) a').on('mouseleave', function () {
-    $worksSvgPath.css('stroke-dashoffset', worksPathLength);
-  });
+  // $('#header .gnb li:nth-child(1) a').on('mouseleave', function () {
+  //   $worksSvgPath.css('stroke-dashoffset', worksPathLength);
+  // });
 
   // about 애니메이션
   // $('#header .gnb li:nth-child(2) a').on('mouseenter', function () {
